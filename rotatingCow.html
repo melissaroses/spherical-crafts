@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #background {
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(black, #000099, #66c2ff, #210047);
+        }
+
+        .vacuum {
+            display: flex;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .sphericalCow {
+            border-radius: 50%;
+            background-image: radial-gradient(circle at 50% -20.71%, #ffb629 0, #ffa537 10%, #ff9243 20%, #ff7e4b 30%, #ff6951 40%, #f25353 50%, #d93f53 60%, #c22f54 70%, #ad2355 80%, #9b1b56 90%, #8c1859 100%);
+            height: 300px;
+            width: 300px;
+            animation: rotation 10s infinite linear;
+        }
+
+        .eyes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: -3%;
+        }
+
+        .eye {
+            height: 65px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .pupil {
+            height: 30px;
+            width: 20px;
+            margin: 25px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(359deg);
+            }
+        }
+    </style>
+    <title>Spinning Cow!</title>
+</head>
+
+<body>
+    <!-- imagine this looks more like a cow...in a vacuum... -->
+    <div id="background"></div>
+    <div class="vacuum">
+        <div class="sphericalCow">
+            <div class="eyes">
+                <div class="eye">
+                    <div class="leftGooglyEye pupil"></div>
+                </div>
+                <div class="eye">
+                    <div class="rightGooglyEye pupil"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
