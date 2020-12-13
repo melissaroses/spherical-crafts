@@ -20,12 +20,24 @@
             padding: 100px;
         }
 
+        .orbitalPath {
+            position: relative;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(211, 211, 211, 0.3);
+            animation: rotation 90s infinite linear;
+            padding: 5%;
+        }
+
         .sphericalCow {
+            position: absolute;
+            margin: -5%;
             border-radius: 50%;
             background: -webkit-radial-gradient(65% 25%, circle, white, gray);
             /* background-image: radial-gradient(circle at 50% -20.71%, #ffb629 0, #ffa537 10%, #ff9243 20%, #ff7e4b 30%, #ff6951 40%, #f25353 50%, #d93f53 60%, #c22f54 70%, #ad2355 80%, #9b1b56 90%, #8c1859 100%); */
-            height: 300px;
-            width: 300px;
+            height: 20%;
+            width: 20%;
             animation: rotation 10s infinite linear;
         }
 
@@ -34,24 +46,24 @@
             flex-direction: row;
             justify-content: center;
             margin-top: -3%;
+            height: 30%;
         }
 
         .eye {
-            height: 65px;
-            width: 50px;
+            height: 90%;
+            width: 20%;
             background-color: white;
             border-radius: 50%;
             border: 1px solid black;
         }
 
         .pupil {
-            height: 30px;
-            width: 20px;
-            margin: 25px;
+            height: 40%;
+            width: 30%;
+            margin-top: 5px;
             border-radius: 50%;
             background-color: black;
         }
-
 
         @keyframes rotation {
             from {
@@ -62,6 +74,16 @@
                 transform: rotate(359deg);
             }
         }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-359deg);
+            }
+        }
     </style>
     <title>Spinning Cow!</title>
 </head>
@@ -70,13 +92,15 @@
     <!-- imagine this looks more like a cow...in a vacuum... -->
     <div id="background"></div>
     <div class="vacuum">
-        <div class="sphericalCow">
-            <div class="eyes">
-                <div class="eye">
-                    <div class="leftGooglyEye pupil"></div>
-                </div>
-                <div class="eye">
-                    <div class="rightGooglyEye pupil"></div>
+        <div class="orbitalPath">
+            <div class="sphericalCow">
+                <div class="eyes">
+                    <div class="eye">
+                        <div class="leftGooglyEye pupil"></div>
+                    </div>
+                    <div class="eye">
+                        <div class="rightGooglyEye pupil"></div>
+                    </div>
                 </div>
             </div>
         </div>
