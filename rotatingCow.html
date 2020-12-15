@@ -3,14 +3,14 @@
 
 <head>
     <style>
-        #background {
-            position: fixed;
+        body {
+            /* position: fixed;
             padding: 0;
             margin: 0;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100%; */
             background: linear-gradient(black, #000099, #66c2ff, #210047);
         }
 
@@ -18,6 +18,17 @@
             display: flex;
             justify-content: center;
             padding: 100px;
+        }
+
+        .moon {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            box-shadow: 15px 5px 0px 0px rgb(255, 214, 138);
+            background-color: transparent;
+            position: absolute;
+            margin-top: 250px;
         }
 
         .orbitalPath {
@@ -32,13 +43,13 @@
 
         .sphericalCow {
             position: absolute;
-            margin: -5%;
+            /* margin: -5%; */
             border-radius: 50%;
             background: -webkit-radial-gradient(65% 25%, circle, white, gray);
             /* background-image: radial-gradient(circle at 50% -20.71%, #ffb629 0, #ffa537 10%, #ff9243 20%, #ff7e4b 30%, #ff6951 40%, #f25353 50%, #d93f53 60%, #c22f54 70%, #ad2355 80%, #9b1b56 90%, #8c1859 100%); */
-            height: 20%;
-            width: 20%;
-            animation: rotation 10s infinite linear;
+            height: 10%;
+            width:  10%;
+            animation: rotation 8s infinite linear;
         }
 
         .eyes {
@@ -92,6 +103,7 @@
     <!-- imagine this looks more like a cow...in a vacuum... -->
     <div id="background"></div>
     <div class="vacuum">
+        <div class="moon"></div>
         <div class="orbitalPath">
             <div class="sphericalCow">
                 <div class="eyes">
